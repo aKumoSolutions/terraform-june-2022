@@ -1,9 +1,10 @@
 #Every single Terraform Configuration file has a format called .tf
 
 resource "aws_instance" "first_ec2" {
-  ami = "ami-0be2609ba883822ec"
-  instance_type = "t2.micro"
+  ami = "ami-098e42ae54c764c35"
+  instance_type = "t3.micro"
 }
+
 
 
 # Syntax is Hashicorp Configuration Language (HCL)
@@ -22,3 +23,12 @@ resource "aws_instance" "first_ec2" {
 # Nice to have:
 # 1. Use _ instead of -
 # 2. Use lower cases
+
+# Working Directory is a place where you run Terraform Commands
+# Terraform has a plugin based archicture
+# Plugin = Feature
+
+# Terraform.tfstate = Backend file
+# There are only 2 types of Backend
+# - Local Backend = is within the Working Directory
+# - Remote Backend = is in the Storage 
