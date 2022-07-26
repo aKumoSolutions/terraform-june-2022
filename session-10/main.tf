@@ -10,8 +10,11 @@ module "ec2" {
   ami           = "ami-098e42ae54c764c35"
   instance_type = "t2.micro"
   env           = "dev"
-  s3_bucket_name = module.s3.id
+  s3_bucket_name = module.s3.bucket_name
 }
+# module.s3.bucket_name = module.module_name.output_name
+
+# Module only reference to an output, this is only way to reference to other modules
 
 # Using Terraform Registry as a remote module
 # module "vpc" {
